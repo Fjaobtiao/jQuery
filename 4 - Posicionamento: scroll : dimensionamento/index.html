@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+  </script>
+  <title>Document</title>
+</head>
+<style>
+  #menu-vertical ul li {
+    display: inline-flex;
+    padding: 10px;
+    background-color: #272727;
+  }
+
+  #menu-vertical ul li a {
+    color: #FFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  .pos01 p {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+  }
+</style>
+
+<body>
+
+  <script>
+    window.addEventListener("resize", function () {
+      var tam = $(window).width();
+      if (tam >= 1024) {
+        $("#menu-vertical").show();
+      } else {
+        $("#menu-vertical").hide();
+
+      }
+    });
+  </script>
+
+  <header>
+    <nav id="menu-vertical">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <script>
+      $(document).ready(function () {
+        $(".but").click(function () {
+          var x = $("p").offset();
+          alert("offset()" + "Top: " + x.top + " Left: " + x.left);
+        });
+        $(".but2").click(function () {
+          var x = $("p").position();
+          alert("position()" + "Top: " + x.top + " Left: " + x.left);
+        });
+      });
+    </script>
+    <section class="pos01">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, quisquam.
+      </p>
+      <button class="but">offset()</button>
+      <button class="but2">position()</button>
+    </section>
+
+    <script>
+      $(document).ready(function () {
+        x = 0
+        $(".but3").click(function () {
+          alert("rolou" + x + "vezes");
+        });
+        $('div').scroll(function () {
+          x++;
+        })
+      });
+    </script>
+
+    <div style="overflow: scroll; width: 200px; height: 200px;">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna
+      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit
+      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint occaecat cupidatat non proident, sunt in culpa qui
+      officia deserunt mollit anim id est laborum.
+    </div>
+
+    <button class="but3">click</button>
+
+    </section>
+  </main>
+</body>
+
+</html>
