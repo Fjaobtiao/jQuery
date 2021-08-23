@@ -1,0 +1,69 @@
+.backdrop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 10;
+}
+
+@keyframes openImg{
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+
+.modalFigure{
+    position: relative;
+    width: 70%;
+    border: ridge #fff;
+    background-color: #fff;
+    transition: all 2s ease-in-out;
+    z-index: 15;
+    animation: openImg .5s;
+}
+
+.modalFigure span{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 100%;
+    transform: translate(50%,-50%);
+}
+
+.modalFigure span:hover{
+    background-color: #fff;
+}
+
+.imgModal{
+    width: 100%;
+    height: 100%;
+    transition: all 2s ease-in-out;
+}
+
+i{
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+i:hover{
+    cursor: pointer;
+    color: #A6756A;
+}

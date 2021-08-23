@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F2E5D5;
+}
+
+
+.container_acessibilidade{
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2fr, 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  width: 70%;
+  margin: auto auto;
+}
+
+.card {
+  align-items: center;
+  padding: 50px;
+  height: 100%;
+  border: 1px solid rgba(243, 243, 243, 0.727);
+  border-radius: 10px;
+  -webkit-box-shadow: 6px 7px 9px 1px rgba(0,0,0,0.08); 
+  box-shadow: 6px 7px 9px 1px rgba(0,0,0,0.03);
+}
+
+#tabela {
+  width: 100%;
+}
+
+.card_titulo {
+  color: #5c5c5c;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  margin-bottom: 10px;
+}
+
+.card th {
+  color: #5c5c5c;
+}
+
+#tabela td, h6 {
+  text-align: center;
+  color: #777777;
+}
+
+#tabela td:nth-child(1) {
+  text-align: left;
+}
+
+.RespX, #vermelho {
+  background-color: rgb(255, 128, 153);
+  border-radius: 3px;
+}
+
+.RespExc, #amarelo {
+  background-color: rgb(255, 253, 152);
+  border-radius: 3px;
+}
+
+.RespY, #verde {
+  background-color: rgb(152, 255, 164);
+  border-radius: 3px;
+}
+
+#laranja {
+  background-color: rgb(255, 200, 128);
+  border-radius: 3px;
+}
+
+#azul {
+  background-color: rgb(128, 172, 255);
+  border-radius: 3px;
+}
+
+.campos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#caixas {
+  padding-top: 50px;
+}
+
+.card label {
+  color: #5c5c5c;
+  margin-left: 15px;
+  width: 100%;
+}
+
+#add_dados_uti, #add_dados_enf {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 40px;
+  background-color: #f0d9c6;
+}
+
+#add_dados_uti, #add_dados_enf:focus {
+  outline: none;
+}
+
+#btn_enviar {
+  background-color: #A6756A;
+  color: white;
+  height: 15%;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(243, 243, 243, 0.727);
+  border-radius: 15px;
+  -webkit-box-shadow: 6px 7px 9px 1px rgba(0,0,0,0.08); 
+  box-shadow: 6px 7px 9px 1px rgba(0,0,0,0.08);
+}
+
+#btn_enviar:hover {
+  color: #5c5c5c;
+  background: #f0d9c6;
+}
+
+#informacoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  margin-top: 85px;
+  box-shadow: 6px 7px 9px 1px rgba(0,0,0,0.03);
+  border: 1px solid rgba(243, 243, 243, 0.727);
+}
+
+#informacoes p {
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .flex-container {
+            display: flex;
+
+        }
+
+        .flex-container div {
+            width: 20%;
+            margin: 30px;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#but1").click(function () {
+                $(".div1").hide();
+            });
+            $("#but2").click(function () {
+                $(".div2 p").show();
+            });
+            $("#but3").click(function () {
+                $(".div3 p").toggle();
+            });
+            $("#but4").click(function () {
+                $(".div4 p").fadeIn();
+            });
+            $("#but5").click(function () {
+                $(".div5 p").fadeOut();
+            });
+            $("#but6").click(function () {
+                $(".div6 p").fadeTo("slow", 0.2);
+            });
+            $("#but7").click(function () {
+                $(".div7 p").fadeToggle("slow");
+            });
+            $("#but8").click(function () {
+                $(".div8 p").slideUp();
+            });
+            $("#but9").click(function () {
+                $(".div9 p").slideDown();
+            });
+            $("#but10").click(function () {
+                $(".div10 p").slideToggle();
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Crie uma página contendo uma div e aplique todos os efeitos que você aprender durante a aula(Hide(), show(), toggle(), fadeIn(), fadeOut(), fadeTo(), fadeToggle(), slideUp(), slideDown(), slideToggle() -->
+
+    <main>
+
+
+        <div class="flex-container">
+            <div class="div1">
+                <h1>Div1</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                </p>
+                <button id="but1">Clica aqui</button>
+            </div>
+            <div class="div2">
+                <h1>Div2</h1>
+                <p style="display: none;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                </p>
+                <button id="but2">Clica aqui</button>
+            </div>
+            <div class="div3">
+                <h1>Div3</h1>
+                <p style="display: none;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                </p>
+                <button id="but3">Clica aqui</button>
+            </div>
+            <div class="div4">
+                <h1>Div4</h1>
+                <p style="display: none;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                </p>
+                <button id="but4">Clica aqui</button>
+            </div>
+            <div class="div5">
+                <h1>Div5</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                </p>
+                <button id="but5">Clica aqui</button>
+            </div>
+            <div class="div6">
+                <h1>Div6</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                </p>
+                <button id="but6">Clica aqui</button>
+            </div>
+            <div class="div7">
+                <h1>Div7</h1>
+                <p style="display: none;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                </p>
+                <button id="but7">Clica aqui</button>
+            </div>
+            <div class="div8">
+                <h1>Div8</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                </p>
+                <button id="but8">Clica aqui</button>
+            </div>
+            <div class="div9">
+                <h1>Div9</h1>
+                <p style="display: none;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                </p>
+                <button id="but9">Clica aqui</button>
+            </div>
+            <div class="div10">
+                <h1>Div10</h1>
+                <p style="display: none;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                </p>
+                <button id="but10">Clica aqui</button>
+            </div>
+        </div>
+
+
+    </main>
+
+
+</body>
+
+</html>

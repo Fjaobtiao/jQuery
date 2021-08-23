@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="css/modal.css"> 
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>SoulMais Ong</title>
+</head>
+
+<body>
+
+    <header class="bgheader" >
+
+        <div class="container">
+            <div class="logo"> <a href="index.html"><img src="images/logo.png" width="100%"></a></div>
+
+            <div class="menu">
+
+                <input type="checkbox" id="control-nav" />
+                <label for="control-nav" class="control-nav"></label>
+                <label for="control-nav" class="control-nav-close"></label>
+
+                <nav>
+                    <ul class="list-auto">
+                        <li>
+                            <a href="quemsomos.html" title="Quem Somos">Quem Somos</a>
+                        </li>
+                        <li>
+                            <a href="galeria.html" title="Galeria" class="ativo">Galeria</a>
+                        </li>
+                        <li>
+                            <a href="cadastro.html" title="Cadastro">Cadastro</a>
+                        </li>
+                        <li>
+                            <a href="indicadores.html" title="Indicadores">Indicadores</a>
+                        </li>
+                        <li>
+                            <a href="contato.html" title="Contato">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+
+
+            <div class="datahora">
+
+                <div id="data-hora"></div>
+
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </header>
+
+    <div class="headgaleria">
+        <div class="container">
+            <div class="breadcrumb">
+                <h1>Galeria</h1>
+                <div class="bread"><a href="index.html">Home</a> > Galeria</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- header -->
+    <div id="galeria">
+        
+    </div>
+    <!-- footer -->
+
+    <footer>
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+
+        <div class="butasse botoes_acessibilidade">
+            <button onclick="fonte('a');" title="Maior">A+</button>
+            <button onclick="fonte('n');" title="Normal">A</button>
+            <button onclick="fonte('d');" title="Menor">A-</button>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+        <div class="container acessibilidade">
+            <a id="subirTopo">^</a>
+            <div class="footercol">
+                <div class="logofooter">
+                <img src="images/logo.png" alt="Soul Mais" />
+                <p>Uma entidade sem fins lucrativos, cujo objetivo é apoiar a comunidade através de conscientização, apoio, informação e promoção da saúde pública.</p>
+                </div>
+            </div>
+            <div class="footercol">
+                <div class="titfooter1">Redes Sociais</div>
+
+                <ul class="social-media">
+                    <li><a href="#"><img src="./images/ico-facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="./images/ico-linkedin.png" alt="Linkedin"></a></li>
+                    <li><a href="#"><img src="./images/ico-twitter.png" alt="Twitter"></a></li>
+                </ul>
+            </div>
+            <div class="footercol">
+                <div class="newsletter">
+                    <div class="titfooter">Newsletter</div>
+                    <p>Cadastre-se em nossa newsletter e receba atualizações sobre o Ministério da Saúde</p>
+                    <form action="" class="formnews">
+                        <input type="text" placeholder="Digite seu e-mail">
+                        <input id="butenviar" type="submit" value="Enviar">
+                    </form>
+
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </footer>
+    <div class="copyright acessibilidade">Projeto desenvolvido por Gabi Fioranelli, Marcelly Sanches, Natalia Sousa,
+        André Miranda e Jota Nascimento</div>
+
+    <!-- footer -->
+    <script src="./js/db.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/galeria.js"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

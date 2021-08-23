@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>SoulMais Ong</title>
+</head>
+
+<body>
+
+    <header class="bgheader">
+
+        <div class="container">
+            <div class="logo"> <a href="index.html"><img src="images/logo.png" width="100%"></a></div>
+
+            <div class="menu acessibilidade">
+
+                <input type="checkbox" id="control-nav" />
+                <label for="control-nav" class="control-nav"></label>
+                <label for="control-nav" class="control-nav-close"></label>
+
+                <nav>
+                    <ul class="list-auto">
+                        <li>
+                            <a href="quemsomos.html" title="Quem Somos">Quem Somos</a>
+                        </li>
+                        <li>
+                            <a href="galeria.html" title="Galeria">Galeria</a>
+                        </li>
+                        <li>
+                            <a href="cadastro.html" title="Cadastro">Cadastro</a>
+                        </li>
+                        <li>
+                            <a href="indicadores.html" title="Indicadores">Indicadores</a>
+                        </li>
+                        <li>
+                            <a href="contato.html" title="Contato">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+
+
+            <div class="datahora">
+
+                <div id="data-hora"></div>
+
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </header>
+
+    <div class="slide">
+        <div class="contfonthome">
+            <h2>Buscamos o melhor para<br>a população</h2>
+            <div class="tit2">Foco na Saúde</div>
+        </div>
+
+    </div>
+
+    <main>
+
+        <section class="container acessibilidade">
+            <div class="cont01">
+                <div class="tithome">
+                    <h5><span class="line"> <img src="images/detalhe-left.png"></span> Vacinas aprovadas em fase
+                        emergencial</h5>
+                    <h2>Eficácia e Médodo</h2>
+                    <p>A Diretoria Colegiada da Agência Nacional de Vigilância Sanitária (Anvisa) avaliou a adequação e
+                        aprovou sob medida temporal e excepcional para minimizar, o mais rápido possível, os impactos da
+                        doença as vacinas CononaVac e da Covishield. Outras aguardam ainda aval.</p>
+                </div>
+                <a href="vacinas-aprovadas.html"><button class="buttithome">Saiba Mais</button></a>
+            </div>
+            <div class="cont02"><img src="images/home-01.png" alt="Desições da Anvisa" class="imgfull"></div>
+            <div class="clear"></div>
+        </section>
+
+        <section class="bgfull">
+
+            <div class="container acessibilidade">
+
+                <div class="cont03"><img src="images/alcool-em-gel.png" alt="Decisões da Anvisa" class="imgfull"></div>
+                <div class="cont04">
+                    <div class="tithome1">
+                        <h5><span class="line"> <img src="images/detalhe-right.png"></span> Prococolos de Combate ao
+                            Vírus</h5>
+                        <h2>Protocolos e Exigências</h2>
+                        <p>O Ministério da Saúde lançou o Protocolo de Tratamento do Novo Coronavírus (2019-nCov) e no
+                            documento fas parte da estratégia prevista no Plano Nacional de Resposta às Emergências em
+                            Saúde Pública do Ministério da Saúde e tem como objetivo orientar a Rede de Serviços de
+                            Atenção à Saúde do SUS para atuação na identificação, notificação e manejo oportuno de casos
+                            suspeitos de infecção humana pelo novo coronavírus de modo a mitigar os riscos de
+                            transmissão sustentada no território nacional.</p>
+                    </div>
+                    <a href="protocolos.html"><button class="buttithome">Saiba Mais</button></a>
+                </div>
+                <div class="clear"></div>
+
+            </div>
+
+        </section>
+
+
+        <section>
+            <div class="section-final">
+                <h5><span class="line2"> <img src="images/detalhe-left.png"></span> técnicas de tratamento <span
+                        class="line3"> <img src="images/detalhe-left.png"></span></h5>
+                <h2>
+                    O que se sabe até agora
+                </h2>
+
+                <a href="ate-agora.html"><img src="images/tratamento-covid.jpg" class="imgfull"></a>
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+
+        <div class="butasse botoes_acessibilidade">
+            <button onclick="fonte('a');" title="Maior">A+</button>
+            <button onclick="fonte('n');" title="Normal">A</button>
+            <button onclick="fonte('d');" title="Menor">A-</button>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+        <div class="container acessibilidade">
+            <a id="subirTopo">^</a>
+            <div class="footercol">
+                <div class="logofooter">
+                <img src="images/logo.png" alt="Soul Mais" />
+                <p>Uma entidade sem fins lucrativos, cujo objetivo é apoiar a comunidade através de conscientização, apoio, informação e promoção da saúde pública.</p>
+                </div>
+            </div>
+            <div class="footercol">
+                <div class="titfooter1">Redes Sociais</div>
+
+                <ul class="social-media">
+                    <li><a href="#"><img src="./images/ico-facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="./images/ico-linkedin.png" alt="Linkedin"></a></li>
+                    <li><a href="#"><img src="./images/ico-twitter.png" alt="Twitter"></a></li>
+                </ul>
+            </div>
+            <div class="footercol">
+                <div class="newsletter">
+                    <div class="titfooter">Newsletter</div>
+                    <p>Cadastre-se em nossa newsletter e receba atualizações sobre o Ministério da Saúde</p>
+                    <form action="" class="formnews">
+                        <input type="text" placeholder="Digite seu e-mail">
+                        <input id="butenviar" type="submit" value="Enviar">
+                    </form>
+
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </footer>
+    <div class="copyright acessibilidade">Projeto desenvolvido por Gabi Fioranelli, Marcelly Sanches, Natalia Sousa,
+        André Miranda e Jota Nascimento</div>
+
+</body>
+
+</html>

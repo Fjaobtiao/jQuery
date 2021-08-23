@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/indicadores.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Indicadores</title>
+</head>
+
+<body>
+
+    <header class="bgheader">
+
+        <div class="container">
+            <div class="logo"> <a href="index.html">logo</a></div>
+
+            <div class="menu">
+
+                <input type="checkbox" id="control-nav" />
+                <label for="control-nav" class="control-nav"></label>
+                <label for="control-nav" class="control-nav-close"></label>
+
+                <nav>
+                    <ul class="list-auto">
+                        <li>
+                            <a href="quemsomos.html" title="Quem Somos">Quem Somos</a>
+                        </li>
+                        <li>
+                            <a href="galeria.html" title="Galeria">Galeria</a>
+                        </li>
+                        <li>
+                            <a href="cadastro.html" title="Cadastro">Cadastro</a>
+                        </li>
+                        <li>
+                            <a href="indicadores.html" title="Indicadores" class="ativo">Indicadores</a>
+                        </li>
+                        <li>
+                            <a href="contato.html" title="Contato">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+
+
+            <div class="datahora">
+
+                <div id="data-hora"></div>
+
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </header>
+
+    <div class="headindicadores">
+        <div class="container">
+            <div class="breadcrumb">
+                <h1>Indicadores</h1>
+                <div class="bread"><a href="index.html">Home</a> > Indicadores</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <main>
+
+        <div class="container_acessibilidade">
+            <div class="card">
+                <h4 class="card_titulo">Gráfico de Ocupação de Leitos</h4>
+                <canvas id="grafico" width="400" height="400"></canvas>
+            </div>
+            <div class="card campos">
+                <h4 class="card_titulo">Digite nos campos abaixo </br>
+                    As informações irão para o gráfico ao lado</h4>
+
+                <div id="caixas">
+                    <label for="add_dados_uti">Leitos de UTI ocupados</label>
+                    <input id="add_dados_uti" type="number" placeholder="Digite aqui a porcentagem">
+    
+                    <label for="add_dados_enf">Leitos de enfermaria ocupados</label>
+                    <input id="add_dados_enf" type="number" placeholder="Digite aqui a porcentagem">
+                    <button id="btn_enviar" type="submit" onclick="aperta_btn()">Enviar</button>
+                </div>
+
+            </div>
+            <div class="card">
+                <table id="tabela">
+                    <h4 class="card_titulo">Tabela de Abertura dos Setores de Acordo com as Fases</h4>
+                    <thead>
+                        <tr>
+                            <th>Setor</th>
+                            <th id="vermelho">Fase 1</th>
+                            <th id="laranja">Fase 2</th>
+                            <th id="amarelo">Fase 3</th>
+                            <th id="verde">Fase 4</th>
+                            <th id="azul">Fase 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Espaços Públicos</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespY">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>Atividades Imobiliárias</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespY">&#10003;</td>
+                            <td class="RespY">&#10003;</td>
+                            <td class="RespY">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>Concessionárias</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespY">&#10003;</td>
+                            <td class="RespY">&#10003;</td>
+                            <td class="RespY">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>Escritórios</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespY">&#10003;</td>
+                            <td class="RespY">&#10003;</td>
+                            <td class="RespY">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>Bares/Restaurantes</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespY">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>Comércio</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespY">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>Shooping</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespY">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>Salão de beleza</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespY">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>Academia</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespY">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>Teatro/Cinema</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespExc">&#33;</td>
+                            <td class="RespY">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>Promovover Eventos/Aglomeração</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespX">&#10008;</td>
+                            <td class="RespY">&#10003;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h6 id="legenda">
+                    Legenda: 
+                        &#10008; - Setor Fechado,
+                        &#33; - Setor aberto com restrições,
+                        &#10003; - Setor Aberto
+                </h6>
+            </div>
+            <div class="card">
+                <div id="informacoes">
+                    <p>Clique nas barras no gráfico acima e saiba mais sobre os leitos da sua cidade</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+
+        <div class="butasse botoes_acessibilidade">
+            <button onclick="fonte('a');" title="Maior">A+</button>
+            <button onclick="fonte('n');" title="Normal">A</button>
+            <button onclick="fonte('d');" title="Menor">A-</button>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+        <div class="container acessibilidade">
+            <div class="footercol">teste</div>
+            <div class="footercol">
+                <div class="titfooter1">Redes Sociais</div>
+
+                <ul class="social-media">
+                    <li><a href="#"><img src="./images/ico-facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="./images/ico-linkedin.png" alt="Linkedin"></a></li>
+                    <li><a href="#"><img src="./images/ico-twitter.png" alt="Twitter"></a></li>
+                </ul>
+            </div>
+            <div class="footercol">
+                <div class="newsletter">
+                    <div class="titfooter">Newsletter</div>
+                    <p>Sign up for industry alerts, our latest news, thoughts, and insights from Decision.</p>
+                    <form action="" class="formnews">
+                        <input type="text" placeholder="Digite seu e-mail">
+                        <input id="butenviar" type="submit" value="Enviar">
+                    </form>
+
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </footer>
+    <div class="copyright acessibilidade">Projeto desenvolvido por Gabi Fioranelli, Marcelly Sanches, Natalia Sousa,
+        André Miranda e Jota Nascimento</div>
+
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="http:////cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/js/scriptIndicadores.js"></script>
+<script src="js/script.js"></script>
+
+</html>

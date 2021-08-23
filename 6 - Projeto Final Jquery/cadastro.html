@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cadastro_estilo.css">
+    <title>SoulMais Ong</title>
+</head>
+
+<body>
+
+    <header class="bgheader" >
+
+        <div class="container">
+            <div class="logo"> <a href="index.html"><img src="images/logo.png" width="100%"></a></div>
+
+            <div class="menu">
+
+                <input type="checkbox" id="control-nav" />
+                <label for="control-nav" class="control-nav"></label>
+                <label for="control-nav" class="control-nav-close"></label>
+
+                <nav>
+                    <ul class="list-auto">
+                        <li>
+                            <a href="quemsomos.html" title="Quem Somos">Quem Somos</a>
+                        </li>
+                        <li>
+                            <a href="galeria.html" title="Galeria">Galeria</a>
+                        </li>
+                        <li>
+                            <a href="cadastro.html" title="Cadastro" class="ativo">Cadastro</a>
+                        </li>
+                        <li>
+                            <a href="indicadores.html" title="Indicadores">Indicadores</a>
+                        </li>
+                        <li>
+                            <a href="contato.html" title="Contato">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+
+
+            <div class="datahora">
+
+                <div id="data-hora"></div>
+
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </header>
+
+    <div class="headcadastro">
+        <div class="container">
+            <div class="breadcrumb">
+                <h1>Cadastro</h1>
+                <div class="bread"><a href="index.html">Home</a> > Cadastro</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <style>
+        .imgfull {width: 100%;}
+    </style>
+
+    <main>
+
+        <div class="container acessibilidade">
+
+            <div class="cont01">
+                <div id="cadastro_vacina">
+                    <section class="cadastro">
+                        <section id="center">
+                            <h2>Cadastro de Vacinação</h2>
+                            <br />
+                            <form>
+                                <input id="nome" type="text" placeholder="Nome" onblur="valida_nome(this)" /><br />
+                                <input id="cpf" type="text" placeholder="CPF" maxlength="11"
+                                    onkeydown="( this, mCPF, NaN )" onblur="valida_cpf(this)" /><br />
+                                <input id="sus" type="text" placeholder="Cartão do SUS" maxlength="15"
+                                    onkeydown="(this,NaN)" onblur="valida_sus(this)" /><br />
+                                <input id="peso" type="text" placeholder="Peso" onkeydown="(this, NaN)"
+                                    onblur="valida_peso(this)" /><br />
+                                <input id="altura" type="text" placeholder="Altura" onkeydown="(this, NaN)"
+                                    onblur="valida_altura(this)" /><br />
+                                <input id="data_nascimento" type="date" placeholder="Data de nascimento"
+                                    onblur="valida_idade(this)" /><br />
+
+                                <select name="sexo" id="sexo" onblur="valida_sexo(this)">
+                                    <option value="">Selecione o sexo</option>
+                                    <option value="do sexo masculino">Masculino</option>
+                                    <option value="do sexo feminino">Feminino</option>
+                                    <option value="não binária">Outros</option>
+                                </select>
+                                <select name="gestante" id="gestante" onblur="valida_gestante(this)">
+                                    <option value="">Gestante</option>
+                                    <option value="gestante sim">Sim</option>
+                                    <option value="gestante não">Não</option>
+                                    <option value="não sei">Não sei</option>
+                                </select>
+                                <select name="etnia" id="etnia" onblur="valida_etnia(this)">
+                                    <option value="">Etnia</option>
+                                    <option value="branco">Branco</option>
+                                    <option value="preto">Preto</option>
+                                    <option value="pardo">Pardo</option>
+                                    <option value="amarelo">Amarelo</option>
+                                    <option value="indigena">Indigena</option>
+                                </select>
+                                <select name="profissao" id="profissao" onblur="valida_profissao(this)">
+                                    <option value="">Profissão</option>
+                                    <option value="educacao">Profissional da Educação</option>
+                                    <option value="transporte">Profissional do Trasnporte Portuário</option>
+                                    <option value="aereo">Profissional do Trasnporte Aéreo</option>
+                                    <option value="motorista e cobrador">Motorista e Cobrador de Ônibus</option>
+                                    <option value="ferrviarios">Metroviários e Ferroviários</option>
+                                    <option value="segurança publica">Profissional de Segurança Pública</option>
+                                    <option value="saude">Profissional de Saúde</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+
+                                <select name="comorbidades" id="comorbidades" onblur="valida_comorbidades(this)">
+                                    <option value="0" selected>Comorbidades</option>
+                                    <option value="1">Sim</option>
+                                    <option value="2">Não</option>
+
+                                </select> <br>
+                                <section class="comorbidades">
+                                    <p>Comorbidades</p> <br> <br>
+
+                                    <input type="checkbox" name="comorbidade" value="cirrose">
+                                    <label for="comorbidade1">Cirrose Hepática</label><br> <br>
+                                    <input type="checkbox" name="comorbidade" value="diabetes">
+                                    <label for="comorbidade2"> Diabetes</label><br> <br>
+                                    <input type="checkbox" name="comorbidade" value="doencas cardiacas">
+                                    <label for="comorbidade3">Doenças Cardiacas</label><br><br>
+                                    <input type="checkbox" name="comorbidade" value="doencas cerebrovasculares">
+                                    <label for="comorbidade4">Doenças Cerebrovasculares</label><br><br>
+                                    <input type="checkbox" name="comorbidade" value="doencas pulmonares">
+                                    <label for="comorbidade5">Doenças Pulmonares</label><br><br>
+                                    <input type="checkbox" name="comorbidade" value="doenca renal">
+                                    <label for="comorbidade6">Doença Renal Crônica</label><br><br>
+                                    <input type="checkbox" name="comorbidade" value="hipertensao">
+                                    <label for="comorbidade7">Hipertensão</label><br><br>
+                                    <input type="checkbox" name="comorbidade" value="obesidade">
+                                    <label for="comorbidade8">Obesidade Mórbida</label><br><br>
+                                    <input type="checkbox" name="comorbidade" value="down">
+                                    <label for="comorbidade9">Síndrome de Down</label><br><br>
+
+                                    </p>
+                                    </select>
+                                    <label for="">Outras</label>
+                                    <textarea id="outros" rows="2" required placeholder="Quais? "
+                                        onblur="valida_mensagem(this)"></textarea> <br>
+                                </section>
+
+                                <section class="vacinas">
+                                    <p>Vacinas <br> <br>
+
+                                        <input type="checkbox" name="vacinas" value="dtp">
+                                        <label for="vacinas1">DTP (difteria, tétano e pertussis)</label><br> <br>
+                                        <input type="checkbox" name="vacinas" value="scr">
+                                        <label for="vacinas2"> SCR (sarampo, caxumba e rubéola)</label><br> <br>
+                                        <input type="checkbox" name="vacinas" value="febre amarela">
+                                        <label for="vacinas3">Febre Amarela</label><br><br>
+                                        <input type="checkbox" name="vacinas" value="gripe">
+                                        <label for="vacinas4">Influenza (gripe)</label><br><br>
+                                        <input type="checkbox" name="vacinas" value="nao">
+                                        <label for="vacinas4">Não sou Vacinado</label><br><br>
+                                        <label for="">Outras</label>
+                                        <textarea id="quais " rows="2" required placeholder="Quais?"
+                                            onblur="valida_mensagem(this)"></textarea> <br>
+                                    </p>
+                                </section>
+
+                                <label for="file">Progresso:</label>
+                                <progress id="file" class="barra" value="0" max="100"></progress> <br> <br>
+                                <button type="button" onclick="enviar_dados()">Enviar</button>
+                            </form>
+                        </section>
+                    </section>
+
+                </div>
+            </div>
+
+            <style>
+.posrelat {
+position: relative;
+height: 1000px;
+}
+.imgfixa {
+position: -webkit-sticky !important;
+position: sticky;
+top: 100px;
+z-index: -999;
+}
+            </style>
+
+           
+            <div class="cont02 posrelat"><img src="images/cadastro_banner_1.png"  class="imgfull imgfixa"></div>
+            <div class="clear"></div>
+
+        </div>
+    </main>
+
+    <footer>
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+
+        <div class="butasse botoes_acessibilidade">
+            <button onclick="fonte('a');" title="Maior">A+</button>
+            <button onclick="fonte('n');" title="Normal">A</button>
+            <button onclick="fonte('d');" title="Menor">A-</button>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+        <div class="container acessibilidade">
+            <a id="subirTopo">^</a>
+            <div class="footercol">
+                <div class="logofooter">
+                    <img src="images/logo.png" alt="Soul Mais" />
+                    <p>Uma entidade sem fins lucrativos, cujo objetivo é apoiar a comunidade através de conscientização,
+                        apoio, informação e promoção da saúde pública.</p>
+                </div>
+            </div>
+            <div class="footercol">
+                <div class="titfooter1">Redes Sociais</div>
+
+                <ul class="social-media">
+                    <li><a href="#"><img src="./images/ico-facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="./images/ico-linkedin.png" alt="Linkedin"></a></li>
+                    <li><a href="#"><img src="./images/ico-twitter.png" alt="Twitter"></a></li>
+                </ul>
+            </div>
+            <div class="footercol">
+                <div class="newsletter">
+                    <div class="titfooter">Newsletter</div>
+                    <p>Cadastre-se em nossa newsletter e receba atualizações sobre o Ministério da Saúde</p>
+                    <form action="" class="formnews">
+                        <input type="text" placeholder="Digite seu e-mail">
+                        <input id="butenviar" type="submit" value="Enviar">
+                    </form>
+
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </footer>
+    <div class="copyright acessibilidade">Projeto desenvolvido por Gabi Fioranelli, Marcelly Sanches, Natalia Sousa,
+        André Miranda e Jota Nascimento</div>
+
+    <script src="js/queries.js"></script>
+    <script src="js/cadastro.js"></script>
+
+</body>
+
+</html>

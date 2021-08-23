@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+
+    <style>
+        .cont1 {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .div1,
+        .div2,
+        .div3,
+        .div4,
+        .div5 {
+            width: 17%;
+            height: 300px;
+            border: 1px solid;
+            display: inline-block;
+            margin: 10px;
+            overflow: scroll;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .main {
+            padding-bottom: 200px;
+        }
+
+        .butinicial {
+            background-color: #646d6e;
+            display: block;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        form {
+            width: 600px;
+            margin: 50px auto;
+            background: #5796C2;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #form_id input {
+            padding: 10px;
+            border: none;
+            margin-bottom: 10px;
+            width: 29%;
+        }
+
+        #form_id select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url(...);
+            padding: 10px;
+            border: none;
+            border-radius: 0;
+            width: 32%;
+        }
+
+        #resultado {
+            display: none;
+            height: 150px;
+            text-align: center;
+        }
+
+        #butenviar {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            background: #2B4753;
+            color: #FFF;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #2B4753;
+            cursor: pointer;
+            height: 45px;
+        }
+
+        #butenviar:hover {
+            background: transparent;
+            color: #2B4753;
+            border: 2px solid #2B4753;
+            height: 45px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#but1").click(function () {
+                $(".div1").css({
+                    backgroundColor: "#B5D2FF"
+                });
+                $(".div1").height(50);
+                $(".div1").width(100);
+                $(".div1").fadeOut(2000);
+                $(".div2").css({
+                    backgroundColor: "#4D6CAF"
+                });
+                $(".div2").height(90);
+                $(".div2").width(100);
+                $(".div2").slideUp(2000);
+                $(".div3").css({
+                    backgroundColor: "#2C487E"
+                });
+                $(".div3").height(70);
+                $(".div3").width(230);
+                $(".div3").fadeOut(2000);
+                $(".div4").css({
+                    backgroundColor: "#2C487E"
+                });
+                $(".div4").height(60);
+                $(".div4").width(80);
+                $(".div4").slideToggle(2000);
+                $(".div5").css({
+                    backgroundColor: "#101F41"
+                });
+                $(".div5").height(80);
+                $(".div5").width(150);
+                $(".div5").fadeTo("slow", 0.1);
+            });
+            $("#but2").click(function () {
+                $(".div1").css({
+                    backgroundColor: "#508CC3"
+                });
+                $(".div1").height(300);
+                $(".div1").width(150);
+                $(".div2").css({
+                    backgroundColor: "#508CC3"
+                });
+                $(".div2").height(300);
+                $(".div2").width(150);
+                $(".div3").css({
+                    backgroundColor: "#508CC3"
+                });
+                $(".div3").height(300);
+                $(".div3").width(150);
+                $(".div4").css({
+                    backgroundColor: "#508CC3"
+                });
+                $(".div4").height(300);
+                $(".div4").width(150);
+                $(".div5").css({
+                    backgroundColor: "#508CC3"
+                });
+                $(".div5").height(300);
+                $(".div5").width(150);
+            });
+
+            $("#but3").dblclick(function () {
+                $(".div3").fadeOut("slow");
+                $(".div5").slideUp("fast");
+            });
+
+            $("input").focusin(function () {
+                $(this).css("background", "#9CCAE2");
+            });
+
+
+            $("input").focusout(function () {
+                $(this).css("background", "#FFF");
+            });
+
+
+            $("#butenviar").click(function (event) {
+                var nome = $("#nomeuser").val();
+                var email = $("#emailuser").val();
+                event.preventDefault();
+                $("#resultado").show(1000);
+                $('span').text("Nome: " + nome + " e E-mail: " + email);
+            });
+
+
+
+        });
+    </script>
+
+
+
+</head>
+
+<body>
+
+
+
+    <!-- 1) Criar uma página que possua 5 divs, 3 botões, 1 formulário contendo 5 campos de texto(Nome, endereço, telefone, email e cpf) , e 1 select contendo opções de estados do Brasil (Pelo menos 10 estados) e um botão de enviar. Faça o que se pede abaixo: -->
+
+    <!-- - Ao clicar no primeiro botão, as 5 divs devem aparecer com cores diferentes, largura e altura diferentes e com um efeito que você aprendeu em Jquery (Á sua escolha)
+
+    - Ao clicar no segundo botão, todas as divs deverão ficar com a cor azul, largura de 300px e altura de 150px.
+    
+    - Ao dar um duplo clique no terceiro botão, você deverá esconder duas divs à sua escolha, também utilizando um efeito do Jquery.
+    
+    - Coloque um foco nos campos do formulário com uma cor agradável ao usuário, e ao tirar o foco do campo de formulário remova esse efeito.
+    
+    - Pegue o valor do nome e do email do usuário e apresente na tela em uma tag de span os dados que foram digitados pelo usuário. -->
+
+
+    <header>
+
+    </header>
+    <main>
+        <div class="cont1">
+            <div class="div1">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                    consequuntur autem est ullam quibusdam nobis quis? Quibusdam quidem, vitae animi fugiat dicta
+                    voluptates
+                    beatae suscipit magnam tempore perferendis totam, atque officia amet numquam dolore exercitationem
+                    enim!
+                    Perspiciatis animi minus velit aliquid provident.
+                </p>
+            </div>
+            <div class="div2">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                    consequuntur autem est ullam quibusdam nobis quis? Quibusdam quidem, vitae animi fugiat dicta
+                    voluptates
+                    beatae suscipit magnam tempore perferendis totam, atque officia amet numquam dolore exercitationem
+                    enim!
+                    Perspiciatis animi minus velit aliquid provident.
+                </p>
+            </div>
+            <div class="div3">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                    consequuntur autem est ullam quibusdam nobis quis? Quibusdam quidem, vitae animi fugiat dicta
+                    voluptates
+                    beatae suscipit magnam tempore perferendis totam, atque officia amet numquam dolore exercitationem
+                    enim!
+                    Perspiciatis animi minus velit aliquid provident.
+                </p>
+            </div>
+            <div class="div4">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                    consequuntur autem est ullam quibusdam nobis quis? Quibusdam quidem, vitae animi fugiat dicta
+                    voluptates
+                    beatae suscipit magnam tempore perferendis totam, atque officia amet numquam dolore exercitationem
+                    enim!
+                    Perspiciatis animi minus velit aliquid provident.
+                </p>
+            </div>
+            <div class="div5">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam officiis quisquam consequatur
+                    ratione et, optio, quae dolore nisi cumque eaque. Commodi doloremque inventore aliquam neque quod.
+                    Odit
+                    delectus provident repellendus, ut exercitationem aliquid magni deleniti tempore deserunt ad earum
+                    recusandae obcaecati placeat eum. Sint nam non nisi excepturi tempora deleniti eligendi delectus
+                    debitis
+                    nihil. Adipisci minima reiciendis nesciunt alias, doloribus fugit, quasi repellat atque placeat
+                    libero
+                    consequuntur autem est ullam quibusdam nobis quis? Quibusdam quidem, vitae animi fugiat dicta
+                    voluptates
+                    beatae suscipit magnam tempore perferendis totam, atque officia amet numquam dolore exercitationem
+                    enim!
+                    Perspiciatis animi minus velit aliquid provident.
+                </p>
+            </div>
+        </div>
+
+        <div class="butinicial">
+
+            <button id="but1">Ação 1</button>
+
+            <button id="but2">Ação 2</button>
+
+            <button id="but3">Ação 3</button>
+
+        </div>
+
+
+        <form action="" id="form_id">
+            <input type="text" name="nomeuser" id="nomeuser" placeholder="Nome">
+            <input type="text" name="enderecouser" id="enderecouser" placeholder="Endereço">
+            <input type="text" name="telefoneuser" id="telefoneuser" placeholder="Telefone">
+            <input type="text" name="emailuser" id="emailuser" placeholder="E-mail">
+            <input type="text" name="cpfuser" id="cpfuser" placeholder="CPF">
+            <select name="estados" id="estados">
+                <option value="valor1">Acre (AC)</option>
+                <option value="valor2">Alagoas (AL)</option>
+                <option value="valor3">Amapá (AP)</option>
+                <option value="valor4">Amazonas (AM)</option>
+                <option value="valor5">Bahia (BA)</option>
+                <option value="valor6">Ceará (CE)</option>
+                <option value="valor7">Distrito Federal (DF)</option>
+                <option value="valor8">Espírito Santo (ES)</option>
+                <option value="valor9">Goiás (GO)</option>
+                <option value="valor10">Maranhão (MA)</option>
+                <option value="valor11">Mato Grosso (MT)</option>
+                <option value="valor12">Mato Grosso do Sul (MS)</option>
+                <option value="valor13">Minas Gerais (MG)</option>
+                <option value="valor14">Pará (PA) </option>
+                <option value="valor15">Paraíba (PB)</option>
+                <option value="valor16">Paraná (PR)</option>
+                <option value="valor17">Pernambuco (PE)</option>
+                <option value="valor18">Piauí (PI)</option>
+                <option value="valor19">Rio de Janeiro (RJ)</option>
+                <option value="valor20">Rio Grande do Norte (RN)</option>
+                <option value="valor21">Rio Grande do Sul (RS)</option>
+                <option value="valor22">Rondônia (RO)</option>
+                <option value="valor23">Roraima (RR)</option>
+                <option value="valor24">Santa Catarina (SC)</option>
+                <option value="valor25">São Paulo (SP)</option>
+                <option value="valor26">Sergipe (SE)</option>
+                <option value="valor27">Tocantins (TO)</option>
+            </select>
+            <input id="butenviar" type="submit" value="Enviar">
+        </form>
+
+        <div id="resultado">Seus dados são: <span></span></div>
+
+
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+
+.formulario input[type='text'], [type='date'], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-top: 10px;
+  font-size: 14px;
+  }
+.formulario button {
+  background-color: #a6756a;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 14px;
+  }
+#contato {
+  background-color: white;
+  width: 104%;
+}
+.h2_contact {
+  font-size: Xx-large;
+  text-align: center;
+}
+
+#titulo {
+  padding: 30px;
+  }
